@@ -1,0 +1,19 @@
+{
+  "name": "botson-2.0",
+  "version": "1.0.0",
+  "description": "A Facebook Messenger port of one of my earliest journeys into programming...an MSN Messenger bot written in VB6 (circa 2002)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charliedavison/Botson-2.0.git"
+  },
+  "author": "Charlie Davison",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charliedavison/Botson-2.0/issues"
+  },
+  "homepage": "https://github.com/charliedavison/Botson-2.0#readme"
+}
