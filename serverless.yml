@@ -1,0 +1,26 @@
+service: webhook
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  webhook_verify:
+    handler: rest_api/webhook/get/handler.handle
+    description: Used by Facebook for verifying webhook
+    timeout: 10
+    events:
+      - http:
+          path: /webhook
+          method: get
+
+  webhook_post:
+    handler: rest_api/webhook/post/handler.handle
+    description: Handle incoming messages and events
+    timeout: 10
+    events:
+      - http:
+          path: /webhook
+          method: post
