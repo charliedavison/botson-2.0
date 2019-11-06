@@ -1,0 +1,140 @@
+{
+  "resource": "/webhook",
+  "path": "/webhook",
+  "httpMethod": "POST",
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "deflate, gzip",
+    "CloudFront-Forwarded-Proto": "https",
+    "CloudFront-Is-Desktop-Viewer": "true",
+    "CloudFront-Is-Mobile-Viewer": "false",
+    "CloudFront-Is-SmartTV-Viewer": "false",
+    "CloudFront-Is-Tablet-Viewer": "false",
+    "CloudFront-Viewer-Country": "US",
+    "Content-Type": "application/json",
+    "Host": "3ql8xliqb4.execute-api.us-east-1.amazonaws.com",
+    "User-Agent": "facebookexternalua",
+    "Via": "1.1 9fdb94d31cea383ee9cfa1b9714dc610.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Id": "QkQJ8Y-oBtVWdvrZ_tdoOeccdMfHjzjx8RKv7lA3vheMrAlz-OhgXw==",
+    "X-Amzn-Trace-Id": "Root=1-5dc2bdf5-373e686cc289de41881a5ed4",
+    "X-Forwarded-For": "173.252.95.8, 70.132.36.131",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https",
+    "X-Hub-Signature": "sha1=8be280e83abf6e4680e0cf8beb37bae54fb38766"
+  },
+  "multiValueHeaders": {
+    "Accept": [
+      "*/*"
+    ],
+    "Accept-Encoding": [
+      "deflate, gzip"
+    ],
+    "CloudFront-Forwarded-Proto": [
+      "https"
+    ],
+    "CloudFront-Is-Desktop-Viewer": [
+      "true"
+    ],
+    "CloudFront-Is-Mobile-Viewer": [
+      "false"
+    ],
+    "CloudFront-Is-SmartTV-Viewer": [
+      "false"
+    ],
+    "CloudFront-Is-Tablet-Viewer": [
+      "false"
+    ],
+    "CloudFront-Viewer-Country": [
+      "US"
+    ],
+    "Content-Type": [
+      "application/json"
+    ],
+    "Host": [
+      "3ql8xliqb4.execute-api.us-east-1.amazonaws.com"
+    ],
+    "User-Agent": [
+      "facebookexternalua"
+    ],
+    "Via": [
+      "1.1 9fdb94d31cea383ee9cfa1b9714dc610.cloudfront.net (CloudFront)"
+    ],
+    "X-Amz-Cf-Id": [
+      "QkQJ8Y-oBtVWdvrZ_tdoOeccdMfHjzjx8RKv7lA3vheMrAlz-OhgXw=="
+    ],
+    "X-Amzn-Trace-Id": [
+      "Root=1-5dc2bdf5-373e686cc289de41881a5ed4"
+    ],
+    "X-Forwarded-For": [
+      "173.252.95.8, 70.132.36.131"
+    ],
+    "X-Forwarded-Port": [
+      "443"
+    ],
+    "X-Forwarded-Proto": [
+      "https"
+    ],
+    "X-Hub-Signature": [
+      "sha1=8be280e83abf6e4680e0cf8beb37bae54fb38766"
+    ]
+  },
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null,
+  "requestContext": {
+    "resourceId": "xf29ur",
+    "resourcePath": "/webhook",
+    "httpMethod": "POST",
+    "extendedRequestId": "CvKeVGDToAMFenA=",
+    "requestTime": "06/Nov/2019:12:35:01 +0000",
+    "path": "/dev/webhook",
+    "accountId": "031026321668",
+    "protocol": "HTTP/1.1",
+    "stage": "dev",
+    "domainPrefix": "3ql8xliqb4",
+    "requestTimeEpoch": 1573043701200,
+    "requestId": "e8ced0d7-f16b-4cd2-9ffc-0dfa55dee340",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "accountId": null,
+      "cognitoIdentityId": null,
+      "caller": null,
+      "sourceIp": "173.252.95.8",
+      "principalOrgId": null,
+      "accessKey": null,
+      "cognitoAuthenticationType": null,
+      "cognitoAuthenticationProvider": null,
+      "userArn": null,
+      "userAgent": "facebookexternalua",
+      "user": null
+    },
+    "domainName": "3ql8xliqb4.execute-api.us-east-1.amazonaws.com",
+    "apiId": "3ql8xliqb4"
+  },
+  "body": {
+    "object": "page",
+    "entry": [
+      {
+        "id": "104081144378279",
+        "time": 1573043701024,
+        "messaging": [
+          {
+            "sender": {
+              "id": "2604045899673651"
+            },
+            "recipient": {
+              "id": "104081144378279"
+            },
+            "timestamp": 1573043700476,
+            "message": {
+              "mid": "m_tJdCyWz6VBEfoeEbqzJtInYFxsM64CAMNdHatyyaZm8AWvB-DD2xvFfso-qLROKOpqTQS8IUuEJy5SKNx8R5zA",
+              "text": "Sample message from work"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "isBase64Encoded": false
+}
