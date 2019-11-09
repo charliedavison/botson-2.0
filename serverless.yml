@@ -1,4 +1,4 @@
-service: webhook
+service: botson-2-0
 
 provider:
   name: aws
