@@ -1,6 +1,6 @@
 'use strict';
-const HttpSuccess = require('../../../lib/HttpSuccess');
-const HttpError = require('../../../lib/HttpError');
+const HttpSuccess = require('../../../lib/http/HttpSuccess');
+const HttpError = require('../../../lib/http/HttpError');
 
 exports.handle = async (event) => {
   const { queryStringParameters } = event;

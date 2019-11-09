@@ -1,0 +1,47 @@
+{
+  "commands": [
+    {
+      "command_text": "-menu",
+      "response": "\uD83D\uDCA1 Botsons Menu \uD83D\uDCA1\r\n\r\n\uD83D\uDCBB 1 | Utilities\r\n\uD83C\uDFAA 2 | Fun & Games\r\n\uD83E\uDD16 3 | Bot Functions\r\n\uD83D\uDC81 4 | Help",
+      "response_type": "text"
+    },
+    {
+      "command_text": "1",
+      "response": "\uD83D\uDCBB Utilities \uD83D\uDCBB\r\n\r\n-encode <text> | Encodes the text into Base64\r\n-decode <base64 string> | Decodes the the base64 string back into normal text",
+      "response_type": "text"
+    },
+    {
+      "command_text": "2",
+      "response": "\uD83C\uDFAA Fun & Games \uD83C\uDFAA",
+      "response_type": "text"
+    },
+    {
+      "command_text": "3",
+      "response": "\uD83E\uDD16 Bot Functions \uD83E\uDD16",
+      "response_type": "text"
+    },
+    {
+      "command_text": "4",
+      "response": "\uD83D\uDC81 Help \uD83D\uDC81",
+      "response_type": "text"
+    },
+    {
+      "command_text": "-encode",
+      "handler": "utilities.base64.encode",
+      "response_type": "text"
+    },
+    {
+      "command_text": "-decode",
+      "handler": "utilities.base64.decode",
+      "response_type": "text"
+    }
+  ],
+  "not_recognised": {
+    "response": "\uD83E\uDD2F I don't know how to respond to that, type -menu to see my commands.",
+    "response_type": "text"
+  },
+  "welcome_message": {
+    "response": "(co)Welcome to Botson!(co) \r\n Type -menu to see my commands.",
+    "response_type": "text"
+  }
+}

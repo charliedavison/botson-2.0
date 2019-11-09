@@ -1,6 +1,6 @@
 'use strict';
-const HttpSuccess = require('../../../lib/HttpSuccess.js');
-const HttpError = require('../../../lib/HttpError.js');
+const HttpSuccess = require('../../../lib/http/HttpSuccess.js');
+const HttpError = require('../../../lib/http/HttpError.js');
 const { handleReceivedMessage } = require('./lib/messaging');
 
 exports.handle = async event => {
