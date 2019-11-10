@@ -12,7 +12,7 @@
     },
     {
       "command_text": "2",
-      "response": "\uD83C\uDFAA Fun & Games \uD83C\uDFAA",
+      "response": "\uD83C\uDFAA Fun & Games \uD83C\uDFAA\r\n\r\n-rps <rock/paper/scissors> | Play rock,paper,scissors with the bot",
       "response_type": "text"
     },
     {
