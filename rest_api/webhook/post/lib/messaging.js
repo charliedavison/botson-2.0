@@ -2,6 +2,9 @@
 const request = require('request-promise');
 const getCommand = require('./get-command');
 
+// 0 to disable the typing indicator completely.
+const TYPING_MS = parseInt(process.env.TYPING_MS || 0);
+
 exports.handleReceivedMessage = async event => {
     const senderId = event.sender.id;
     const {
@@ -9,6 +12,8 @@ exports.handleReceivedMessage = async event => {
     } = event.message;
 
   try {
+    await addTypingDelay(senderId);
+
     const {response, response_type} = getCommand(messageText);
 
     switch (response_type) {
@@ -34,6 +39,21 @@ const sendTextMessage = async (senderId, messageText) => {
   };
 
   await callSendAPI(messageData);
+};
+
+const addTypingDelay = async senderId => {
+  if (!TYPING_MS) return;
+
+  const getTypingIndicatorPayload = isTyping => ({
+    recipient: {
+      id: senderId
+    },
+    sender_action: `typing_${isTyping ? 'on' : 'off'}`
+  });
+
+  await callSendAPI(getTypingIndicatorPayload(true));
+  await new Promise(resolve => setTimeout(resolve, TYPING_MS));
+  await callSendAPI(getTypingIndicatorPayload(false));
 };
 
 const callSendAPI = async messageData => {
