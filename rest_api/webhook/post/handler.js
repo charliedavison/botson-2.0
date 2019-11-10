@@ -8,13 +8,19 @@ exports.handle = async event => {
 
   if (object !== 'page') return new HttpError(404);
 
-  for (const pageEntry of entry) {
-    for (const messagingEvent of pageEntry.messaging) {
-      if (messagingEvent.message) {
-        await handleReceivedMessage(messagingEvent);
+  try {
+    for (const pageEntry of entry) {
+      for (const messagingEvent of pageEntry.messaging) {
+        if (messagingEvent.message) {
+          await handleReceivedMessage(messagingEvent);
+        }
       }
     }
-  }
 
-  return new HttpSuccess();
+    return new HttpSuccess();
+
+  } catch (err) {
+    console.error(err);
+    return new HttpSuccess();
+  }
 };
