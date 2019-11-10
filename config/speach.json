@@ -34,6 +34,11 @@
       "command_text": "-decode",
       "handler": "utilities.base64.decode",
       "response_type": "text"
+    },
+    {
+      "command_text": "-rps",
+      "handler": "fun.rps.play",
+      "response_type": "text"
     }
   ],
   "not_recognised": {

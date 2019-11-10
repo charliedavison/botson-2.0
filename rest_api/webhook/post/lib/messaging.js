@@ -3,17 +3,23 @@ const request = require('request-promise');
 const getCommand = require('./get-command');
 
 exports.handleReceivedMessage = async event => {
-  const senderId = event.sender.id;
-  const {
-    text: messageText,
-  } = event.message;
+    const senderId = event.sender.id;
+    const {
+      text: messageText,
+    } = event.message;
 
-  const {response, response_type} = getCommand(messageText);
+  try {
+    const {response, response_type} = getCommand(messageText);
 
-  switch (response_type) {
-    case 'text':
-      await sendTextMessage(senderId, response);
-      break;
+    switch (response_type) {
+      case 'text':
+        await sendTextMessage(senderId, response);
+        break;
+    }
+
+  } catch (e) {
+    await sendTextMessage(senderId,'An error occurred.');
+    throw(e);
   }
 };
 
