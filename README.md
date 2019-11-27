@@ -13,7 +13,7 @@ At the time, I was running this just on my home PC, so it would be online only w
 
 Over time, I added more and more functionality to the bot, mostly just little games, or things that involved picking a random line from a list of items in a file. It looks like I managed to squeeze quite a lot out of that functionality - introducing Random Fact, 8 Ball, Yo Momma Jokes commands, all based on that principle. 
 
-The bot had a WinForms based UI that could be used to perform various admin tasks.
+The bot had a WinForms based UI that could be used to perform various admin tasks and showed activity on the bot such as conversations, new friend requests coming in etc.
 
 ![Botson 1.0](./images/botson-1.0.png)
 
