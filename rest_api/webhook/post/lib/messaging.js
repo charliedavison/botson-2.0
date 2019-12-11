@@ -16,6 +16,8 @@ exports.handleReceivedMessage = async event => {
 
     const {response, response_type} = getCommand(messageText);
 
+    console.log('test pr')
+
     switch (response_type) {
       case 'text':
         await sendTextMessage(senderId, response);
