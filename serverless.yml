@@ -2,9 +2,37 @@ service: botson-2-0
 
 provider:
   name: aws
-  runtime: nodejs10.x
+  runtime: nodejs14.x
   stage: dev
   region: us-east-1
+  lambdaHashingVersion: 20201221
+
+  iam:
+    role:
+      statements:
+        - Effect: "Allow"
+          Action:
+            - "dynamodb:PutItem"
+            - "dynamodb:GetItem"
+          Resource:
+            - "arn:aws:dynamodb:*:*:table/guestbookTable"
+
+resources:
+  Resources:
+    guestbookTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: guestbookTable
+        AttributeDefinitions:
+          - AttributeName: messageId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: messageId
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
 
 functions:
   webhook_verify:
@@ -15,6 +43,8 @@ functions:
       - http:
           path: /webhook
           method: get
+    environment:
+      VERIFY_TOKEN: ${ssm:/botson-facebook-verification-token~true}
 
   webhook_post:
     handler: rest_api/webhook/post/handler.handle
@@ -24,3 +54,6 @@ functions:
       - http:
           path: /webhook
           method: post
+    environment:
+      PAGE_ACCESS_TOKEN: ${ssm:/botson-facebook-page-access-token~true}
+      TYPING_MS: 0

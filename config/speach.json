@@ -17,7 +17,7 @@
     },
     {
       "command_text": "3",
-      "response": "\uD83E\uDD16 Bot Functions \uD83E\uDD16",
+      "response": "\uD83E\uDD16 Bot Functions \uD83E\uDD16\r\n\r\n-sign <message> | Sign the bot's guestbook",
       "response_type": "text"
     },
     {
@@ -43,6 +43,11 @@
     {
       "command_text": "-coin",
       "handler": "fun.coin.throw",
+      "response_type": "text"
+    },
+    {
+      "command_text": "-sign",
+      "handler": "functions.guestbook.sign",
       "response_type": "text"
     }
   ],

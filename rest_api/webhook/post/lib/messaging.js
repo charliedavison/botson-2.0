@@ -3,6 +3,7 @@ const request = require('request-promise');
 const getCommand = require('./get-command');
 
 // 0 to disable the typing indicator completely.
+// TODO: Remove the indicator, new privacy rules mean enabling it causes an error in EU and Japan.
 const TYPING_MS = parseInt(process.env.TYPING_MS || 0);
 
 exports.handleReceivedMessage = async event => {
@@ -14,7 +15,7 @@ exports.handleReceivedMessage = async event => {
   try {
     await addTypingDelay(senderId);
 
-    const {response, response_type} = getCommand(messageText);
+    const {response, response_type} = await getCommand(messageText);
 
     switch (response_type) {
       case 'text':
