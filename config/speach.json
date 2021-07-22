@@ -49,6 +49,11 @@
       "command_text": "-sign",
       "handler": "functions.guestbook.sign",
       "response_type": "text"
+    },
+    {
+      "command_text": "-view",
+      "handler": "functions.guestbook.view",
+      "response_type": "text"
     }
   ],
   "not_recognised": {
