@@ -15,7 +15,7 @@ exports.handleReceivedMessage = async event => {
   try {
     await addTypingDelay(senderId);
 
-    const {response, response_type} = await getCommand(messageText);
+    const {response, response_type} = await getCommand(senderId, messageText);
 
     switch (response_type) {
       case 'text':
