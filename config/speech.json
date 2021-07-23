@@ -56,6 +56,18 @@
       "response_type": "text"
     }
   ],
+  "generic_error": {
+    "response": "An error occurred. Please try again later.",
+    "response_type":"text"
+  },
+  "guestbook_signed": {
+    "response": "Thankyou for signing the guestbook! Use -viewbook to view the other entries.",
+    "response_type": "text"
+  },
+  "guestbook_empty": {
+    "response": "The guestbook is empty! Make the first entry -signbook <message> to write your message.",
+    "response_type": "text"
+  },
   "not_recognised": {
     "response": "\uD83E\uDD2F I don't know how to respond to that, type -menu to see my commands.",
     "response_type": "text"

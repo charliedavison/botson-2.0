@@ -1,6 +1,7 @@
 'use strict';
 const request = require('request-promise');
 const getCommand = require('./get-command');
+const { getSpeechResponse } = require('../../../../lib/utils.js');
 
 // 0 to disable the typing indicator completely.
 // TODO: Remove the indicator, new privacy rules mean enabling it causes an error in EU and Japan.
@@ -24,7 +25,7 @@ exports.handleReceivedMessage = async event => {
     }
 
   } catch (e) {
-    await sendTextMessage(senderId,'An error occurred.');
+    await sendTextMessage(senderId, getSpeechResponse('generic_error'));
     throw(e);
   }
 };

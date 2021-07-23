@@ -1,13 +1,13 @@
 'use strict';
 const get = require('lodash/get');
-const speach = require('./../../../../config/speach.json');
+const speech = require('./../../../../config/speech.json');
 const commandHandlers = require('./../../../../lib/command-handlers');
 
 module.exports = async (senderId, messageText) => {
   const [commandText, ...args] = messageText.split(' ');
-  const command = speach.commands.find(command => command.command_text === commandText);
+  const command = speech.commands.find(command => command.command_text === commandText);
 
-  if (!command) return speach.not_recognised;
+  if (!command) return speech.not_recognised;
 
   if (command.handler) {
     return await callHandlerFunc(senderId, command, args)
