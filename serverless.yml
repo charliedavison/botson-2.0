@@ -14,6 +14,7 @@ provider:
           Action:
             - "dynamodb:PutItem"
             - "dynamodb:GetItem"
+            - "dynamodb:Scan"
           Resource:
             - "arn:aws:dynamodb:*:*:table/guestbookTable"
 

@@ -17,7 +17,7 @@
     },
     {
       "command_text": "3",
-      "response": "\uD83E\uDD16 Bot Functions \uD83E\uDD16\r\n\r\n-sign <message> | Sign the bot's guestbook",
+      "response": "\uD83E\uDD16 Bot Functions \uD83E\uDD16\r\n\r\n-signbook <message> | Sign the bot's guestbook\r\n-viewbook <message> | View the bot's guestbook",
       "response_type": "text"
     },
     {
@@ -46,12 +46,12 @@
       "response_type": "text"
     },
     {
-      "command_text": "-sign",
+      "command_text": "-signbook",
       "handler": "functions.guestbook.sign",
       "response_type": "text"
     },
     {
-      "command_text": "-view",
+      "command_text": "-viewbook",
       "handler": "functions.guestbook.view",
       "response_type": "text"
     }
