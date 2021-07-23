@@ -1,4 +1,4 @@
-# Botson-2.0
+# Botson 2.0
 A Facebook Messenger port of one of my earliest journeys into programming...an MSN Messenger bot written in VB6 (circa 2004).
 
 Although almost every feature is largely useless as a Facebook bot (I do miss online guestbooks though, whatever happened to those?), this project is serving as a useful
