@@ -8,15 +8,15 @@ const { getSpeechResponse } = require('../../../../lib/utils.js');
 const TYPING_MS = parseInt(process.env.TYPING_MS || 0);
 
 exports.handleReceivedMessage = async event => {
-    const senderId = event.sender.id;
-    const {
-      text: messageText,
-    } = event.message;
+  const senderId = event.sender.id;
+  const {
+    text: messageText,
+  } = event.message;
 
   try {
     await addTypingDelay(senderId);
 
-    const {response, response_type} = await getCommand(senderId, messageText);
+    const { response, response_type } = await getCommand(senderId, messageText);
 
     switch (response_type) {
       case 'text':
@@ -26,7 +26,7 @@ exports.handleReceivedMessage = async event => {
 
   } catch (e) {
     await sendTextMessage(senderId, getSpeechResponse('generic_error'));
-    throw(e);
+    throw (e);
   }
 };
 

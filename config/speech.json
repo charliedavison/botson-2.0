@@ -54,11 +54,17 @@
       "command_text": "-viewbook",
       "handler": "functions.guestbook.view",
       "response_type": "text"
+    },
+    {
+      "command_text": "-addadmin",
+      "handler": "admin.permissions.addAdmin",
+      "response_type": "text",
+      "min_permission_level": 1
     }
   ],
   "generic_error": {
     "response": "An error occurred. Please try again later.",
-    "response_type":"text"
+    "response_type": "text"
   },
   "guestbook_signed": {
     "response": "Thankyou for signing the guestbook! Use -viewbook to view the other entries.",
@@ -68,8 +74,16 @@
     "response": "The guestbook is empty! Make the first entry -signbook <message> to write your message.",
     "response_type": "text"
   },
+  "admin_added": {
+    "response": "You are now an administrator!",
+    "response_type": "text"
+  },
   "not_recognised": {
     "response": "\uD83E\uDD2F I don't know how to respond to that, type -menu to see my commands.",
+    "response_type": "text"
+  },
+  "permissions_failure": {
+    "response": "\uD83E\uDD2F You do not have permission to execute that command.",
     "response_type": "text"
   }
 }
