@@ -71,9 +71,5 @@
   "not_recognised": {
     "response": "\uD83E\uDD2F I don't know how to respond to that, type -menu to see my commands.",
     "response_type": "text"
-  },
-  "welcome_message": {
-    "response": "(co)Welcome to Botson!(co) \r\n Type -menu to see my commands.",
-    "response_type": "text"
   }
 }
