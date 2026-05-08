@@ -12,7 +12,7 @@
     },
     {
       "command_text": "2",
-      "response": "\uD83C\uDFAA Fun & Games \uD83C\uDFAA\r\n\r\n-rps <rock/paper/scissors> | Play rock,paper,scissors with the bot\r\n-coin | Throw a coin",
+      "response": "\uD83C\uDFAA Fun & Games \uD83C\uDFAA\r\n\r\n-rps <rock/paper/scissors> | Play rock,paper,scissors with the bot\r\n-coin | Throw a coin\r\n-8ball <question?> | Ask the Magic 8 Ball",
       "response_type": "text"
     },
     {
@@ -43,6 +43,11 @@
     {
       "command_text": "-coin",
       "handler": "fun.coin.throw",
+      "response_type": "text"
+    },
+    {
+      "command_text": "-8ball",
+      "handler": "fun.eightball.ask",
       "response_type": "text"
     },
     {
